@@ -14,9 +14,7 @@
       --text: #222;
     }
 
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     body {
       margin: 0;
@@ -28,32 +26,31 @@
 
     /* HERO */
     header {
-      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-                  url('https://images.unsplash.com/photo-1549880338-65ddcdfd017b');
+      background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+                  url('image1.jpg');
       background-size: cover;
       background-position: center;
       color: white;
-      padding: 5rem 10%;
+      padding: 5.5rem 10%;
       text-align: center;
     }
 
     header h1 {
-      font-size: 2.8rem;
-      margin-bottom: 0.5rem;
+      font-size: 2.9rem;
+      margin-bottom: 0.8rem;
     }
 
     header p {
-      font-size: 1.2rem;
-      max-width: 700px;
+      font-size: 1.25rem;
+      max-width: 800px;
       margin: 0 auto;
     }
 
-    /* NAV */
     nav {
       position: sticky;
       top: 0;
       background: var(--secondary);
-      padding: 0.75rem;
+      padding: 0.9rem;
       display: flex;
       justify-content: center;
       gap: 2rem;
@@ -64,55 +61,45 @@
       color: white;
       text-decoration: none;
       font-weight: 600;
-      letter-spacing: 0.5px;
     }
 
-    nav a:hover {
-      color: #f5b7b7;
-    }
+    nav a:hover { color: #f5b7b7; }
 
-    /* SECTIONS */
     section {
-      padding: 4rem 10%;
+      padding: 4.5rem 10%;
       background: white;
     }
 
-    section:nth-of-type(even) {
-      background: #f7f3f3;
-    }
+    section:nth-of-type(even) { background: #f7f3f3; }
 
     section h2 {
-      font-size: 2rem;
+      font-size: 2.1rem;
       color: var(--primary);
-      margin-bottom: 1.2rem;
+      margin-bottom: 1.3rem;
     }
 
-    section h3 {
-      margin-top: 2rem;
-      color: #444;
-    }
+    section h3 { margin-top: 2.3rem; }
 
     .highlight {
       background: var(--accent);
-      padding: 1.5rem;
+      padding: 1.8rem;
       border-left: 6px solid var(--primary);
-      margin: 2rem 0;
+      margin: 2.2rem 0;
       font-weight: 500;
     }
 
-    /* CARDS */
     .card-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
-      margin-top: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.7rem;
+      margin-top: 2.2rem;
     }
 
     .card {
       background: white;
-      padding: 1.8rem;
-      border-radius: 12px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      padding: 2rem;
+      border-radius: 14px;
+      box-shadow: 0 12px 28px rgba(0,0,0,0.08);
     }
 
     .card h4 {
@@ -120,60 +107,32 @@
       color: var(--primary);
     }
 
-    /* LISTS */
-    ul {
-      padding-left: 1.2rem;
-    }
+    ul { padding-left: 1.3rem; }
+    li { margin-bottom: 0.7rem; }
 
-    li {
-      margin-bottom: 0.6rem;
-    }
-
-    /* VIDEO */
     .video-placeholder {
-      margin-top: 2.5rem;
-      padding: 3rem;
-      border-radius: 12px;
-      border: 3px dashed #aaa;
+      margin-top: 2.8rem;
+      padding: 3.2rem;
+      border-radius: 14px;
+      border: 3px dashed #999;
       text-align: center;
       background: #fff;
-      color: #666;
+      color: #555;
       font-size: 1.1rem;
     }
 
-    /* LINKS */
-    a.source {
-      color: var(--primary);
-      text-decoration: none;
-      font-weight: 600;
-    }
-
-    a.source:hover {
-      text-decoration: underline;
-    }
-
-    /* FOOTER */
     footer {
       background: var(--secondary);
       color: white;
       text-align: center;
-      padding: 2.5rem 10%;
+      padding: 2.8rem 10%;
     }
 
-    footer p {
-      margin: 0.3rem 0;
-      font-size: 0.95rem;
-    }
+    footer p { margin: 0.4rem 0; }
 
-    /* RESPONSIVE */
     @media (max-width: 768px) {
-      header h1 {
-        font-size: 2.1rem;
-      }
-      nav {
-        flex-wrap: wrap;
-        gap: 1rem;
-      }
+      header h1 { font-size: 2.2rem; }
+      nav { flex-wrap: wrap; gap: 1rem; }
     }
   </style>
 </head>
@@ -181,125 +140,165 @@
 
 <header>
   <h1>Call to Action #76</h1>
-  <p>Honouring Residential Schools Missing Children through Truth, Education, and Reconciliation</p>
+  <p>
+    Honouring Residential Schools Missing Children and addressing the lasting impacts of
+    colonial violence through education, remembrance, and reconciliation.
+  </p>
 </header>
 
 <nav>
-  <a href="#about">About</a>
-  <a href="#creator">Creator</a>
+  <a href="#about">Call to Action</a>
+  <a href="#creator">Content Creator</a>
   <a href="#research">Research</a>
   <a href="#campaign">Campaign</a>
   <a href="#videos">Videos</a>
 </nav>
 
 <section id="about">
-  <h2>Truth and Reconciliation Commission</h2>
+  <h2>Truth and Reconciliation Commission: Call to Action #76</h2>
   <div class="highlight">
-    <strong>Call to Action #76:</strong><br />
-    Supporting Indigenous communities in locating, documenting, and memorializing children
-    who died while attending residential schools.
+    <strong>Residential Schools Missing Children</strong><br />
+    Call to Action #76 calls upon the federal government to work with Indigenous communities
+    to identify, document, maintain, and commemorate burial sites of children who died while
+    attending residential schools.
   </div>
   <p>
-    This call to action recognizes the profound loss caused by residential schools and
-    emphasizes remembrance, accountability, and respect for Indigenous children whose
-    lives were taken and forgotten.
+    Thousands of Indigenous children were taken from their families and placed into
+    residential schools, where many faced neglect, abuse, and poor living conditions.
+    Many children never returned home, and their deaths were often undocumented or hidden.
+  </p>
+  <p>
+    This call to action emphasizes truth-telling and remembrance. It seeks to honour the
+    children who were lost and provide families and communities with answers, dignity,
+    and long-overdue recognition.
   </p>
 </section>
 
 <section id="creator">
-  <h2>Content Creator Spotlight</h2>
+  <h2>Content Creator: Michelle Chubb</h2>
 
   <div class="card-grid">
     <div class="card">
-      <h4>Michelle Chubb</h4>
-      <p><strong>Platform:</strong> TikTok</p>
+      <h4>Who She Is</h4>
       <p>
-        Michelle Chubb educates audiences on Indigenous identity, history, and systemic
-        injustice through personal storytelling, humour, and cultural pride.
-      </p>
-      <p>
-        <a class="source" href="https://www.tiktok.com/@indigenous_baddie" target="_blank">
-          Visit on TikTok
-        </a>
+        Michelle Chubb is an Indigenous content creator on TikTok who uses her platform
+        to educate audiences about Indigenous history, identity, and contemporary issues.
+        Her work connects past injustices to ongoing systemic challenges faced by Indigenous
+        communities today.
       </p>
     </div>
 
     <div class="card">
-      <h4>Key Topics</h4>
+      <h4>What She Teaches</h4>
       <ul>
-        <li>MMIWG2S+</li>
-        <li>Colonization & Cultural Genocide</li>
-        <li>Two-Spirit identity</li>
+        <li>Missing and Murdered Indigenous Women and Girls (MMIWG2S+)</li>
+        <li>Colonization and cultural genocide</li>
+        <li>Two-Spirit identity and inclusion</li>
         <li>Discriminatory justice systems</li>
-        <li>Cultural preservation</li>
+        <li>Cultural preservation and pride</li>
       </ul>
     </div>
 
     <div class="card">
-      <h4>Education Strategies</h4>
+      <h4>How She Educates</h4>
       <ul>
-        <li>Cultural storytelling & humour</li>
-        <li>Personal lived experiences</li>
-        <li>Empowerment & visibility</li>
-        <li>Community advocacy</li>
+        <li>Blending humour with cultural storytelling</li>
+        <li>Sharing personal lived experiences</li>
+        <li>Using traditional clothing and practices in videos</li>
+        <li>Empowering Indigenous youth to embrace their identity</li>
       </ul>
     </div>
   </div>
 </section>
 
 <section id="research">
-  <h2>Research: Missing & Murdered Indigenous Women and Girls</h2>
+  <h2>Research Focus: Missing and Murdered Indigenous Women and Girls</h2>
 
   <div class="card-grid">
     <div class="card">
       <h4>What?</h4>
-      <p>Disproportionate violence faced by Indigenous women due to systemic racism and colonial legacies.</p>
+      <p>
+        Missing and Murdered Indigenous Women and Girls refers to the disproportionately high
+        rates of violence, disappearances, and murders experienced by Indigenous women.
+        This violence is rooted in systemic racism, sexism, and colonial policies.
+      </p>
     </div>
 
     <div class="card">
       <h4>Who?</h4>
-      <p>Indigenous women and girls, Indigenous communities, advocacy groups, and governments.</p>
+      <p>
+        Indigenous women and girls are the primary victims. Indigenous communities,
+        advocacy groups, and international organizations work to raise awareness and
+        push for justice and systemic change.
+      </p>
     </div>
 
     <div class="card">
       <h4>Where?</h4>
-      <p>Primarily Canada, with similar issues in the United States and Australia.</p>
+      <p>
+        The crisis is most visible in Canada but is also relevant in countries such as the
+        United States and Australia, where Indigenous communities face similar patterns
+        of violence and discrimination.
+      </p>
     </div>
 
     <div class="card">
       <h4>When?</h4>
-      <p>An ongoing crisis for decades, gaining major attention in recent years.</p>
+      <p>
+        This has been an ongoing crisis for decades. While families and communities have
+        spoken out for years, national and media attention has increased only in recent times.
+      </p>
     </div>
 
     <div class="card">
       <h4>Why?</h4>
-      <p>Colonial policies created long-term systemic discrimination and injustice.</p>
+      <p>
+        European colonization disrupted Indigenous societies, imposed harmful policies,
+        and created long-lasting systems of discrimination. These structures continue to
+        contribute to violence and lack of accountability today.
+      </p>
     </div>
+  </div>
+
+  <div class="highlight">
+    Indigenous women are nearly four times more likely than non-Indigenous women to
+    experience violence. The red dress has become a powerful symbol to honour those who
+    are missing or murdered, representing both loss and remembrance.
   </div>
 </section>
 
 <section id="campaign">
-  <h2>Action Campaign</h2>
+  <h2>Action Campaign Plan</h2>
 
-  <div class="highlight">
-    The Residential Schools Missing Children campaign seeks to educate youth, honour lost
-    children, and inspire collective action toward reconciliation.
-  </div>
+  <p>
+    This awareness campaign is designed to educate youth about Canada’s residential school
+    system and its connection to ongoing injustices such as MMIWG. By using accessible
+    digital platforms, the campaign encourages learning, empathy, and action.
+  </p>
 
   <div class="card-grid">
     <div class="card">
       <h4>Website</h4>
-      <p>Central hub for education, updates, and resources.</p>
+      <p>
+        The website serves as a central hub containing research, educational content,
+        and updates related to Call to Action #76 and MMIWG.
+      </p>
     </div>
 
     <div class="card">
-      <h4>Educational Videos</h4>
-      <p>Short- and long-form videos explaining history and ongoing impacts.</p>
+      <h4>Educational Video Series</h4>
+      <p>
+        A series of videos explaining the history of residential schools, missing children,
+        and their lasting impacts on Indigenous communities.
+      </p>
     </div>
 
     <div class="card">
-      <h4>Social Media</h4>
-      <p>Community engagement and awareness-building through popular platforms.</p>
+      <h4>Social Media Integration</h4>
+      <p>
+        Educational clips and updates will be shared on platforms such as YouTube and
+        Instagram to build community engagement and awareness.
+      </p>
     </div>
   </div>
 </section>
@@ -307,16 +306,21 @@
 <section id="videos">
   <h2>Educational Video Series</h2>
   <p>
-    This section will feature original videos exploring residential schools, missing children,
-    and pathways toward justice and reconciliation.
+    This space is reserved for original recorded videos created for this campaign.
+    The videos will further explain residential schools, missing children, and the
+    importance of reconciliation.
   </p>
 
   <div class="video-placeholder">
-    <p><strong>Your Video Goes Here</strong></p>
-    <p>Replace this box with an embedded YouTube video or uploaded file</p>
+    <p><strong>Your Recorded Video Goes Here</strong></p>
+    <p>Replace this box with your embedded or uploaded video</p>
   </div>
 </section>
 
 <footer>
   <p>NBE3U Culminating Assignment</p>
-  <p>
+  <p>Truth • Remembrance • Reconciliation</p>
+</footer>
+
+</body>
+</html>
