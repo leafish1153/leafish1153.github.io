@@ -3,154 +3,201 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TRC Call to Action #76 | Missing Children</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <title>TRC Call to Action #76 | Awareness Campaign</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
   <style>
+    :root {
+      --primary: #8b1e1e;
+      --dark: #1f1f1f;
+      --light: #f6f4f1;
+      --card: #ffffff;
+    }
+
+    * { box-sizing: border-box; }
+
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
-      background-color: #f7f5f2;
-      color: #1f1f1f;
+      background: var(--light);
+      color: var(--dark);
       line-height: 1.7;
     }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(31,31,31,0.95);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav a {
+      color: #f6f4f1;
+      text-decoration: none;
+      margin-left: 1.5rem;
+      font-weight: 500;
+    }
+
     header {
-      background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('image1.jpg') center/cover no-repeat;
+      background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)), url('image1.jpg') center/cover no-repeat;
       color: white;
-      padding: 6rem 2rem;
+      padding: 7rem 2rem;
       text-align: center;
     }
+
     header h1 {
       font-family: 'Playfair Display', serif;
-      font-size: 3rem;
+      font-size: 3.2rem;
       margin-bottom: 1rem;
     }
+
     header p {
-      max-width: 800px;
+      max-width: 850px;
       margin: auto;
       font-size: 1.2rem;
     }
+
     section {
-      padding: 4rem 10%;
+      padding: 4.5rem 8%;
     }
-    section h2 {
+
+    h2 {
       font-family: 'Playfair Display', serif;
-      font-size: 2.2rem;
-      margin-bottom: 1rem;
+      font-size: 2.3rem;
+      margin-bottom: 1.5rem;
     }
-    .split {
-      display: flex;
-      gap: 3rem;
-      flex-wrap: wrap;
-      align-items: center;
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2.5rem;
     }
-    .split img {
+
+    .card {
+      background: var(--card);
+      padding: 2.2rem;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    }
+
+    .card img {
       width: 100%;
-      max-width: 450px;
       border-radius: 12px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+      margin-bottom: 1.2rem;
     }
-    .video-placeholder {
+
+    .highlight {
+      background: var(--primary);
+      color: white;
+      padding: 3.5rem 8%;
+    }
+
+    .video-box {
       border: 3px dashed #999;
       padding: 3rem;
+      background: #fff;
       text-align: center;
       font-style: italic;
-      margin-top: 2rem;
-      background: #fff;
     }
+
     footer {
-      background: #1f1f1f;
-      color: #f7f5f2;
-      padding: 2rem;
+      background: var(--dark);
+      color: #eee;
       text-align: center;
+      padding: 2.5rem 1rem;
       font-size: 0.9rem;
     }
   </style>
 </head>
 <body>
 
+<nav>
+  <strong>TRC #76 Awareness</strong>
+  <div>
+    <a href="#cta">Call to Action</a>
+    <a href="#mmiwg">MMIWG</a>
+    <a href="#creator">Creator</a>
+    <a href="#action">Take Action</a>
+  </div>
+</nav>
+
 <header>
-  <h1>TRC Call to Action #76</h1>
-  <p>Honouring the Missing Children of Residential Schools & Raising Awareness for Missing and Murdered Indigenous Women and Girls</p>
+  <h1>Honouring the Missing Children</h1>
+  <p>Truth and Reconciliation Commission Call to Action #76 & the Ongoing Crisis of Missing and Murdered Indigenous Women and Girls</p>
 </header>
 
-<section>
-  <h2>What Is the Call to Action?</h2>
-  <div class="split">
-    <div>
-      <p>The Truth and Reconciliation Commission’s Call to Action #76 urges the Canadian government, churches, and communities to work with Indigenous peoples to document, protect, and commemorate burial sites associated with former residential schools. Thousands of Indigenous children died while in the care of these institutions, many without records, graves, or acknowledgment.</p>
-      <p>This call to action is about restoring dignity to children who were systematically stripped of their identities, cultures, and families. It recognizes that reconciliation cannot exist without truth, remembrance, and accountability.</p>
+<section id="cta">
+  <h2>TRC Call to Action #76</h2>
+  <div class="grid">
+    <div class="card">
+      <img src="image6.jpg" alt="Residential school memorial">
+      <p>Call to Action #76 urges the Canadian government and churches to work with Indigenous communities to document, protect, and commemorate burial sites connected to former residential schools. Thousands of Indigenous children died while under state care, often without records, marked graves, or acknowledgment.</p>
     </div>
-    <img src="image6.jpg" alt="Residential school memorial">
-  </div>
-</section>
-
-<section>
-  <h2>What Is MMIWG?</h2>
-  <div class="split">
-    <img src="image3.jpg" alt="Indigenous women community">
-    <div>
-      <p>Missing and Murdered Indigenous Women and Girls (MMIWG2S+) refers to the disproportionately high rates of violence, disappearances, and deaths experienced by Indigenous women, girls, and Two-Spirit people. Indigenous women in Canada are nearly four times more likely than non-Indigenous women to be victims of violence.</p>
-      <p>This crisis is not random. It is the result of long-standing colonial policies, systemic racism, gender-based discrimination, and institutional neglect that continue to devalue Indigenous lives.</p>
+    <div class="card">
+      <p>This call recognizes that reconciliation cannot occur without truth. Memorialization restores dignity to children whose identities were erased through forced assimilation, cultural genocide, and neglect.</p>
+      <p>By locating and honoring burial sites, Canada confronts the legacy of residential schools rather than hiding it.</p>
     </div>
   </div>
 </section>
 
-<section>
-  <h2>Where Is This Happening?</h2>
-  <div class="split">
-    <div>
-      <p>MMIWG is most visible in Canada but also affects Indigenous communities in countries such as the United States and Australia. These regions share colonial histories that disrupted Indigenous governance, justice systems, and community protections.</p>
-      <p>In Canada, violence against Indigenous women occurs both in urban centers and remote communities, often compounded by inadequate policing, jurisdictional gaps, and limited access to resources.</p>
+<section id="mmiwg" class="highlight">
+  <h2>Missing & Murdered Indigenous Women and Girls</h2>
+  <div class="grid">
+    <div class="card">
+      <img src="image2.jpg" alt="Red dress installation">
+      <p>MMIWG2S+ refers to the disproportionately high rates of violence experienced by Indigenous women, girls, and Two-Spirit people. Indigenous women in Canada are nearly four times more likely than non-Indigenous women to be victims of violence.</p>
     </div>
-    <img src="image5.jpg" alt="Map of Indigenous territories">
-  </div>
-</section>
-
-<section>
-  <h2>When Did Awareness Grow?</h2>
-  <div class="split">
-    <img src="image4.jpg" alt="MMIWG vigil">
-    <div>
-      <p>Although Indigenous communities have raised concerns for decades, national attention to MMIWG significantly increased in the 2010s through activism, art installations, and digital advocacy. The National Inquiry into MMIWG was launched in 2016, acknowledging the crisis as a serious human rights violation.</p>
-      <p>Today, social media has become a powerful space for education and remembrance, allowing younger generations to engage with issues that were previously ignored.</p>
+    <div class="card">
+      <p>This crisis is rooted in colonialism, systemic racism, sexism, and institutional failure. The same systems that allowed residential schools to exist continue to fail Indigenous communities today.</p>
+      <p>The red dress has become a symbol of absence, representing lives lost and justice denied.</p>
     </div>
   </div>
 </section>
 
 <section>
-  <h2>Symbols of Remembrance</h2>
-  <div class="split">
-    <div>
-      <p>The red dress has become a widely recognized symbol representing missing and murdered Indigenous women and girls. Each empty dress symbolizes a life taken, a story silenced, and a family grieving.</p>
-      <p>These installations confront the public with absence — forcing society to acknowledge who is missing and why.</p>
+  <h2>Where and When Is This Happening?</h2>
+  <div class="grid">
+    <div class="card">
+      <img src="image5.jpg" alt="Indigenous territories map">
+      <p>MMIWG is most visible in Canada but also affects Indigenous communities in the United States and Australia. These regions share colonial histories that disrupted Indigenous systems of protection and justice.</p>
     </div>
-    <img src="image2.jpg" alt="Red dress installation">
+    <div class="card">
+      <img src="image4.jpg" alt="MMIWG vigil">
+      <p>Although Indigenous communities have spoken out for decades, widespread attention increased in the 2010s through activism, art, and digital advocacy. The National Inquiry into MMIWG was launched in 2016, recognizing the crisis as a human rights violation.</p>
+    </div>
   </div>
 </section>
 
-<section>
+<section id="creator">
   <h2>Media Creator Spotlight: Michelle Chubb</h2>
-  <div class="split">
-    <img src="image7.jpg" alt="Indigenous activism">
-    <div>
-      <p>Michelle Chubb (@indigenous_baddie) is an Indigenous content creator on TikTok who uses storytelling, humor, and cultural expression to educate audiences on Indigenous history and present-day injustices. Her videos address topics such as MMIWG, Two-Spirit identities, cultural genocide, and systemic discrimination.</p>
-      <p>By blending comedy with lived experience, she makes difficult conversations accessible while centering Indigenous voices. Her work empowers Indigenous youth to embrace their identities and challenges non-Indigenous viewers to reflect on their role in reconciliation.</p>
+  <div class="grid">
+    <div class="card">
+      <img src="image7.jpg" alt="Indigenous activism">
+      <p>Michelle Chubb (@indigenous_baddie) is an Indigenous TikTok creator who educates audiences on MMIWG, Two-Spirit identities, cultural genocide, and systemic injustice.</p>
+    </div>
+    <div class="card">
+      <p>Her content blends humor, storytelling, and lived experience. By sharing personal perspectives, she humanizes large-scale issues and empowers Indigenous youth while encouraging accountability and learning from non-Indigenous viewers.</p>
     </div>
   </div>
 </section>
 
-<section>
-  <h2>Your Role: Learn, Share, Act</h2>
-  <p>Reconciliation is not passive. It requires learning uncomfortable truths, amplifying Indigenous voices, and supporting justice-driven initiatives. Youth play a crucial role in reshaping narratives and ensuring that these histories are not forgotten.</p>
+<section id="action">
+  <h2>Your Role in Reconciliation</h2>
+  <p>Reconciliation requires action. Learning Indigenous history, amplifying Indigenous voices, and supporting justice-driven initiatives are essential steps toward meaningful change.</p>
 
-  <div class="video-placeholder">
+  <div class="video-box">
     <p><strong>Your Educational Video Goes Here</strong></p>
-    <p>(Insert your recorded video file or embedded link in this section)</p>
+    <p>(Insert your recorded video file or embed link in this section)</p>
   </div>
 </section>
 
 <footer>
-  <p>Created for NBE3U | Truth and Reconciliation Awareness Campaign</p>
+  <p>NBE3U Culminating Assignment | Truth & Reconciliation Awareness Campaign</p>
 </footer>
 
 </body>
