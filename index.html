@@ -1,138 +1,322 @@
-NBE3U Culminating Assignment
-Process Work (10% of final mark)
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TRC Call to Action #76 | Residential Schools Missing Children</title>
 
-Call to Action
-Choose your Truth and Reconciliation Commission (TRC) call to action to base your awareness campaign on and explain it below.
+  <style>
+    :root {
+      --primary: #8b1d1d;
+      --secondary: #1a1a1a;
+      --accent: #f2e5e5;
+      --bg: #fafafa;
+      --text: #222;
+    }
 
-Call to Action (copy and paste)
-#76 Residential Schools Missing Children
+    * {
+      box-sizing: border-box;
+    }
 
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Roboto, Arial, sans-serif;
+      line-height: 1.7;
+      background-color: var(--bg);
+      color: var(--text);
+    }
 
-Explanation in own words
-This call to action was aimed at supporting Indigenous communities in researching, locating and documenting all burial sites associated with former residential schools. The initiative of the call to action is to seek honour and memorialize the children who died while in the care of residential schools.
+    /* HERO */
+    header {
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                  url('https://images.unsplash.com/photo-1549880338-65ddcdfd017b');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      padding: 5rem 10%;
+      text-align: center;
+    }
 
+    header h1 {
+      font-size: 2.8rem;
+      margin-bottom: 0.5rem;
+    }
 
+    header p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto;
+    }
 
+    /* NAV */
+    nav {
+      position: sticky;
+      top: 0;
+      background: var(--secondary);
+      padding: 0.75rem;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      z-index: 10;
+    }
 
-Content Creator (such as social media influencer, journalist, etc.)
-Tell me about the media creator you chose and where to find them online.
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
 
-Name of Creator (influencer) and/or Handle
-Michelle Chubb
-Social Media Platform(s)
-TikTok
-Information learned from social media creator
+    nav a:hover {
+      color: #f5b7b7;
+    }
 
-(list 3-5 points)
--Missing and Murdered Indigenous Women and Girls (MMIWG2S+)
--Colonization and Cultural Genocide
--Two-Spirit People
--Discriminative Justices
--Cultural Preservation
-Strategies used by creator to educate audience 
+    /* SECTIONS */
+    section {
+      padding: 4rem 10%;
+      background: white;
+    }
 
-(list 3-5)
--Effectively blends culture with education, her videos feature comedy skits acted out in Indigenous practices/outfits while often educating the audience on history and identity.
--She openly talks about her perspective as an Indigenous individual and her feelings towards current systemic injustices.
--Many of her videos feel very personal, as she shares her personal details and experiences regarding macroscopic socioeconomic issues.
--She is a guiding star in the community as she often sheds light on inequalities faced by others and empower them to be proud of their heritage.
-Link to videos, articles, and/or posts.
-https://www.tiktok.com/@indigenous_baddie 
+    section:nth-of-type(even) {
+      background: #f7f3f3;
+    }
 
+    section h2 {
+      font-size: 2rem;
+      color: var(--primary);
+      margin-bottom: 1.2rem;
+    }
 
+    section h3 {
+      margin-top: 2rem;
+      color: #444;
+    }
 
+    .highlight {
+      background: var(--accent);
+      padding: 1.5rem;
+      border-left: 6px solid var(--primary);
+      margin: 2rem 0;
+      font-weight: 500;
+    }
 
+    /* CARDS */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
 
+    .card {
+      background: white;
+      padding: 1.8rem;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    }
 
-Research Organizer
-Conduct research on your TRC Call to Action, and record the research below. Make sure you include all links to your sources! You should have a minimum of three (3) different sources.
+    .card h4 {
+      margin-top: 0;
+      color: var(--primary);
+    }
 
-WHAT?
+    /* LISTS */
+    ul {
+      padding-left: 1.2rem;
+    }
 
-What is your topic? Explain it.
-The topic I chose is Missing and Murdered Indigenous Women and Girls, this refers to the climbing violence rates, disappearances and murders of Indigenous females. The issue represents a serious human issue, however, it has only recently gained significant attention from the national media. It can be broken down into systemic violence and discrimination neglect.
-Source: 
-https://afn.ca/rights-justice/murdered-missing-indigenous-women-girls/ 
-WHO?
+    li {
+      margin-bottom: 0.6rem;
+    }
 
-Who is involved in this issue? 
+    /* VIDEO */
+    .video-placeholder {
+      margin-top: 2.5rem;
+      padding: 3rem;
+      border-radius: 12px;
+      border: 3px dashed #aaa;
+      text-align: center;
+      background: #fff;
+      color: #666;
+      font-size: 1.1rem;
+    }
 
+    /* LINKS */
+    a.source {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+    }
 
-Explain the different people or groups of people.
-To start off, Indigenous women and girls are clearly the victims of this crisis. However, other groups that are involved could include Indigenous communities, women advocacy groups, and international organizations actively working to solve these issues. The victims are experiencing violence that is made up of racism, sexism, and discrimination, while the other groups are trying their best to help give their own solution to the issue.
-Source: 
-https://www.jaimeblackartist.com/exhibitions/ 
-WHERE?
+    a.source:hover {
+      text-decoration: underline;
+    }
 
-Where is this happening or where is it relevant?
-The issue of MMIWG is most observable in Canada, however, it is also relevant in other countries with Indigenous populations such as the United States and Australia. These nations face similar challenges to the protection and justice given to Indigenous women, or to say, Indigenous communities in general.
-Source: 
-https://usw.ca/wp-content/uploads/2022/04/USW-MMIWG-Summary-Final-EN.pdf#:~:text=The%20Inquiry%20found%20that%20the%20excessively%20high,passage%20and%20enforcement%20of%20the%20Indian%20Act. 
-WHEN?
+    /* FOOTER */
+    footer {
+      background: var(--secondary);
+      color: white;
+      text-align: center;
+      padding: 2.5rem 10%;
+    }
 
-When did it happen, or is it currently happening?
+    footer p {
+      margin: 0.3rem 0;
+      font-size: 0.95rem;
+    }
 
-Explain the significance of the time period.
-The crisis has been an ongoing challenge for decades with significant calls to action, however, it has only recently gained main attention from the media and content creators. This increased awareness in the modern day brings much more sense of urgency and many people are now actively working to address the challenges.
-Source: https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/indigenous-people/aboriginal-peoples-documents/calls_to_action_english2.pdf 
-WHY?
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.1rem;
+      }
+      nav {
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
 
-Why did this topic become a TRC Call to Action? 
+<header>
+  <h1>Call to Action #76</h1>
+  <p>Honouring Residential Schools Missing Children through Truth, Education, and Reconciliation</p>
+</header>
 
-Why is it significant in Canada today? 
-This topic is occurring as the colonization of European settlers heavily disrupted the traditions of Indigenous societies which caused systemic racism and discrimination. 
+<nav>
+  <a href="#about">About</a>
+  <a href="#creator">Creator</a>
+  <a href="#research">Research</a>
+  <a href="#campaign">Campaign</a>
+  <a href="#videos">Videos</a>
+</nav>
 
-The creator is choosing to make a video related to this as there is inadequate law enforcement and lots of policy gaps that relate to gender-based violence, human rights violations, etc.
-Source: https://www150.statcan.gc.ca/n1/pub/85-002-x/2022001/article/00012-eng.htm 
-MOST IMPORTANT POINTS
+<section id="about">
+  <h2>Truth and Reconciliation Commission</h2>
+  <div class="highlight">
+    <strong>Call to Action #76:</strong><br />
+    Supporting Indigenous communities in locating, documenting, and memorializing children
+    who died while attending residential schools.
+  </div>
+  <p>
+    This call to action recognizes the profound loss caused by residential schools and
+    emphasizes remembrance, accountability, and respect for Indigenous children whose
+    lives were taken and forgotten.
+  </p>
+</section>
 
-List the three most important things you learned from your research.
-Indigenous women are almost 4 times more likely than non-indigenous women to be the target of violence.
-Source: https://time.com/5600293/canada-indigenous-women-genocide/ 
-The use of red dresses has become a powerful symbol to represent the missing and murdered Indigenous women and girls, it both raises awareness and honors those that were lost.
-Source: https://www.bia.gov/service/mmu 
-The National Inquiry into MMIWG was launched to address this crisis and has resulted in numerous calls for justice and action
-Source: https://www.aic.gov.au/publications/sb/sb46 
+<section id="creator">
+  <h2>Content Creator Spotlight</h2>
 
+  <div class="card-grid">
+    <div class="card">
+      <h4>Michelle Chubb</h4>
+      <p><strong>Platform:</strong> TikTok</p>
+      <p>
+        Michelle Chubb educates audiences on Indigenous identity, history, and systemic
+        injustice through personal storytelling, humour, and cultural pride.
+      </p>
+      <p>
+        <a class="source" href="https://www.tiktok.com/@indigenous_baddie" target="_blank">
+          Visit on TikTok
+        </a>
+      </p>
+    </div>
 
+    <div class="card">
+      <h4>Key Topics</h4>
+      <ul>
+        <li>MMIWG2S+</li>
+        <li>Colonization & Cultural Genocide</li>
+        <li>Two-Spirit identity</li>
+        <li>Discriminatory justice systems</li>
+        <li>Cultural preservation</li>
+      </ul>
+    </div>
 
-Plan for Actionable Campaign
-Now that you’ve completed your research, take some time to plan how you are going to carry out your social awareness campaign. 
+    <div class="card">
+      <h4>Education Strategies</h4>
+      <ul>
+        <li>Cultural storytelling & humour</li>
+        <li>Personal lived experiences</li>
+        <li>Empowerment & visibility</li>
+        <li>Community advocacy</li>
+      </ul>
+    </div>
+  </div>
+</section>
 
-What is the purpose of your action campaign?
-Website and Educational Video Series
-Who is your audience?
-My audience will primarily be teens that are looking to make an impact and want to learn about Canada’s past wrongs regarding Indigenous communities.
-What will you create for your campaign?
+<section id="research">
+  <h2>Research: Missing & Murdered Indigenous Women and Girls</h2>
 
-(What platform/program) will you be using?
-I will be using high-user social media platforms such as YouTube/Instagram, while my website will be coded on github.
-Write an overview for your action campaign.
+  <div class="card-grid">
+    <div class="card">
+      <h4>What?</h4>
+      <p>Disproportionate violence faced by Indigenous women due to systemic racism and colonial legacies.</p>
+    </div>
 
-(2-3 sentences)
-The Residential Schools Missing Children marks the tragic legacy of historical injustices and systemic failures. We must take action not just out of love for children, but rather to make up for the forgotten past. Together, we will increase awareness and funds for these activities.
+    <div class="card">
+      <h4>Who?</h4>
+      <p>Indigenous women and girls, Indigenous communities, advocacy groups, and governments.</p>
+    </div>
 
+    <div class="card">
+      <h4>Where?</h4>
+      <p>Primarily Canada, with similar issues in the United States and Australia.</p>
+    </div>
 
-Campaign Element
+    <div class="card">
+      <h4>When?</h4>
+      <p>An ongoing crisis for decades, gaining major attention in recent years.</p>
+    </div>
 
-Choose at least three (3) strategies to engage your audience 
+    <div class="card">
+      <h4>Why?</h4>
+      <p>Colonial policies created long-term systemic discrimination and injustice.</p>
+    </div>
+  </div>
+</section>
 
-(literary devices, text features, media strategies, or engagement strategies)
-Explanation
+<section id="campaign">
+  <h2>Action Campaign</h2>
 
-Why did you choose these for your specific purpose and audience?
+  <div class="highlight">
+    The Residential Schools Missing Children campaign seeks to educate youth, honour lost
+    children, and inspire collective action toward reconciliation.
+  </div>
 
-What will they look like in your final product (action campaign)?
+  <div class="card-grid">
+    <div class="card">
+      <h4>Website</h4>
+      <p>Central hub for education, updates, and resources.</p>
+    </div>
 
+    <div class="card">
+      <h4>Educational Videos</h4>
+      <p>Short- and long-form videos explaining history and ongoing impacts.</p>
+    </div>
 
-Website
--The website will serve as the main platform for the campaign as it will contain all the information, updates, and resources.
--It will be a simple design that includes sections that are clear and obvious to the users.
-Educational Video Series
--A series of videos will be created to educate the audience about the history and the ongoing impact of Residential schools, primarily focusing on the issue of missing children and unmarked burial sites.
-Social Media Integration
--The campaign will use social media platforms to share educational content.
--Hopes to regulate posts to build a community and increase awareness.
+    <div class="card">
+      <h4>Social Media</h4>
+      <p>Community engagement and awareness-building through popular platforms.</p>
+    </div>
+  </div>
+</section>
 
+<section id="videos">
+  <h2>Educational Video Series</h2>
+  <p>
+    This section will feature original videos exploring residential schools, missing children,
+    and pathways toward justice and reconciliation.
+  </p>
 
+  <div class="video-placeholder">
+    <p><strong>Your Video Goes Here</strong></p>
+    <p>Replace this box with an embedded YouTube video or uploaded file</p>
+  </div>
+</section>
 
+<footer>
+  <p>NBE3U Culminating Assignment</p>
+  <p>
