@@ -3,300 +3,891 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TRC Call to Action #76 | Awareness Campaign</title>
+  <title>Yvette Shao | Biomedical Engineering Vision</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <style>
-    :root {
-      --primary: #8b1e1e;
-      --dark: #1f1f1f;
-      --light: #f6f4f1;
-      --card: #ffffff;
+    :root{
+      --bg:#07111f;
+      --bg2:#0d1c34;
+      --card:rgba(255,255,255,0.05);
+      --line:rgba(255,255,255,0.1);
+      --text:#eef4ff;
+      --muted:rgba(238,244,255,0.72);
+      --accent:#7dd3fc;
+      --accent2:#a78bfa;
+      --accent3:#34d399;
+      --radius:26px;
+      --shadow:0 20px 60px rgba(0,0,0,0.35);
     }
 
-    * { box-sizing: border-box; }
-
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background: var(--light);
-      color: var(--dark);
-      line-height: 1.7;
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
     }
 
-    nav {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      background: rgba(31,31,31,0.95);
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+    html{
+      scroll-behavior:smooth;
     }
 
-    nav a {
-      color: #f6f4f1;
-      text-decoration: none;
-      margin-left: 1.5rem;
-      font-weight: 500;
+    body{
+      font-family:'Inter',sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(125,211,252,0.18), transparent 28%),
+        radial-gradient(circle at bottom right, rgba(167,139,250,0.14), transparent 30%),
+        linear-gradient(180deg,var(--bg),var(--bg2));
+      color:var(--text);
+      min-height:100vh;
+      overflow-x:hidden;
+      line-height:1.7;
     }
 
-    header {
-      background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)), url('image1.jpg') center/cover no-repeat;
-      color: white;
-      padding: 7rem 2rem;
-      text-align: center;
+    .container{
+      width:min(1250px, calc(100% - 30px));
+      margin:24px auto;
+      border:1px solid var(--line);
+      border-radius:32px;
+      overflow:hidden;
+      background:rgba(255,255,255,0.03);
+      backdrop-filter:blur(18px);
+      box-shadow:var(--shadow);
     }
 
-    header h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 3.2rem;
-      margin-bottom: 1rem;
+    .hero{
+      padding:40px;
+      position:relative;
+      overflow:hidden;
+      border-bottom:1px solid var(--line);
     }
 
-    header p {
-      max-width: 850px;
-      margin: auto;
-      font-size: 1.2rem;
+    .hero::before{
+      content:"";
+      position:absolute;
+      width:400px;
+      height:400px;
+      background:radial-gradient(circle, rgba(125,211,252,0.18), transparent 70%);
+      top:-160px;
+      right:-120px;
+      border-radius:50%;
+      pointer-events:none;
     }
 
-    section {
-      padding: 4.5rem 8%;
+    .topbar{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:20px;
+      flex-wrap:wrap;
+      margin-bottom:30px;
     }
 
-    h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 2.3rem;
-      margin-bottom: 1.5rem;
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:16px;
     }
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2.5rem;
+    .brand-icon{
+      width:60px;
+      height:60px;
+      border-radius:18px;
+      display:grid;
+      place-items:center;
+      background:linear-gradient(135deg, rgba(125,211,252,0.2), rgba(167,139,250,0.2));
+      border:1px solid var(--line);
+      color:var(--accent);
+      font-size:1.3rem;
     }
 
-    .card {
-      background: var(--card);
-      padding: 2.2rem;
-      border-radius: 16px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    .brand h1{
+      font-size:clamp(2rem,4vw,3rem);
+      line-height:1.1;
+      letter-spacing:-0.04em;
     }
 
-    .card img {
-      width: 100%;
-      border-radius: 12px;
-      margin-bottom: 1.2rem;
+    .brand p{
+      color:var(--muted);
+      margin-top:4px;
     }
 
-    .highlight {
-      background: var(--primary);
-      color: white;
-      padding: 3.5rem 8%;
+    .pill-group{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
     }
 
-    .video-box {
-      border: 3px dashed #999;
-      padding: 3rem;
-      background: #fff;
-      text-align: center;
-      font-style: italic;
+    .pill{
+      padding:10px 15px;
+      border-radius:999px;
+      background:rgba(255,255,255,0.05);
+      border:1px solid var(--line);
+      color:var(--text);
+      font-size:0.9rem;
+      display:flex;
+      align-items:center;
+      gap:8px;
     }
 
-    footer {
-      background: var(--dark);
-      color: #eee;
-      text-align: center;
-      padding: 2.5rem 1rem;
-      font-size: 0.9rem;
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1.2fr 0.9fr;
+      gap:24px;
+      align-items:stretch;
+    }
+
+    .hero-copy,
+    .hero-image{
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      overflow:hidden;
+      background:rgba(255,255,255,0.04);
+    }
+
+    .hero-copy{
+      padding:32px;
+    }
+
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:8px 14px;
+      border-radius:999px;
+      background:rgba(125,211,252,0.1);
+      border:1px solid rgba(125,211,252,0.2);
+      margin-bottom:18px;
+      font-size:0.9rem;
+      font-weight:600;
+    }
+
+    .hero-copy h2{
+      font-size:clamp(2.2rem,5vw,4rem);
+      line-height:1.05;
+      margin-bottom:18px;
+      letter-spacing:-0.05em;
+    }
+
+    .hero-copy p{
+      color:var(--muted);
+      font-size:1.03rem;
+      max-width:62ch;
+    }
+
+    .button-row{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-top:24px;
+    }
+
+    .btn{
+      padding:13px 18px;
+      border-radius:16px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,0.05);
+      color:var(--text);
+      font-weight:600;
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      transition:0.25s ease;
+    }
+
+    .btn:hover{
+      transform:translateY(-2px);
+      background:rgba(255,255,255,0.08);
+    }
+
+    .btn.primary{
+      background:linear-gradient(135deg, rgba(125,211,252,0.22), rgba(167,139,250,0.22));
+    }
+
+    .hero-image{
+      position:relative;
+    }
+
+    .hero-image img{
+      width:100%;
+      height:100%;
+      min-height:360px;
+      object-fit:cover;
+    }
+
+    .hero-overlay{
+      position:absolute;
+      left:18px;
+      right:18px;
+      bottom:18px;
+      padding:18px;
+      border-radius:18px;
+      background:linear-gradient(180deg, rgba(5,12,22,0.18), rgba(5,12,22,0.82));
+      border:1px solid rgba(255,255,255,0.12);
+      backdrop-filter:blur(10px);
+    }
+
+    .hero-overlay strong{
+      display:block;
+      margin-bottom:4px;
+      font-size:1rem;
+    }
+
+    .hero-overlay span{
+      color:rgba(255,255,255,0.75);
+      font-size:0.94rem;
+    }
+
+    .timeline{
+      display:grid;
+      grid-template-columns:repeat(6,1fr);
+      gap:14px;
+      margin-top:28px;
+    }
+
+    .timeline-card{
+      background:rgba(255,255,255,0.05);
+      border:1px solid var(--line);
+      border-radius:20px;
+      padding:18px 14px;
+      text-align:center;
+    }
+
+    .timeline-card small{
+      display:block;
+      color:rgba(255,255,255,0.55);
+      text-transform:uppercase;
+      letter-spacing:0.15em;
+      margin-bottom:6px;
+      font-size:0.72rem;
+      font-weight:700;
+    }
+
+    .timeline-card h4{
+      font-size:0.98rem;
+      line-height:1.3;
+    }
+
+    .section{
+      padding:34px;
+      border-top:1px solid var(--line);
+    }
+
+    .section-title{
+      margin-bottom:24px;
+    }
+
+    .section-title h3{
+      font-size:clamp(1.6rem,3vw,2rem);
+      margin-bottom:10px;
+      letter-spacing:-0.03em;
+    }
+
+    .section-title p{
+      color:var(--muted);
+      max-width:70ch;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:20px;
+    }
+
+    .card{
+      background:rgba(255,255,255,0.04);
+      border:1px solid var(--line);
+      border-radius:28px;
+      overflow:hidden;
+      transition:0.3s ease;
+      display:flex;
+      flex-direction:column;
+    }
+
+    .card:hover{
+      transform:translateY(-6px);
+      border-color:rgba(125,211,252,0.25);
+    }
+
+    .card-image{
+      position:relative;
+      height:240px;
+      overflow:hidden;
+    }
+
+    .card-image img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      transition:0.5s ease;
+    }
+
+    .card:hover img{
+      transform:scale(1.05);
+    }
+
+    .label{
+      position:absolute;
+      top:14px;
+      left:14px;
+      background:rgba(7,17,31,0.7);
+      border:1px solid rgba(255,255,255,0.14);
+      backdrop-filter:blur(10px);
+      padding:8px 12px;
+      border-radius:999px;
+      font-size:0.84rem;
+      font-weight:700;
+    }
+
+    .card-body{
+      padding:22px;
+      display:flex;
+      flex-direction:column;
+      gap:15px;
+      flex:1;
+    }
+
+    .card-title{
+      display:flex;
+      gap:14px;
+      align-items:flex-start;
+    }
+
+    .icon{
+      width:46px;
+      height:46px;
+      border-radius:14px;
+      display:grid;
+      place-items:center;
+      background:linear-gradient(135deg, rgba(125,211,252,0.18), rgba(167,139,250,0.18));
+      border:1px solid rgba(255,255,255,0.12);
+      color:var(--accent);
+      flex-shrink:0;
+    }
+
+    .card-title h4{
+      font-size:1.2rem;
+      margin-bottom:4px;
+      letter-spacing:-0.02em;
+    }
+
+    .card p{
+      color:var(--muted);
+      font-size:0.98rem;
+    }
+
+    .quote-box{
+      padding:16px;
+      border-radius:18px;
+      background:rgba(255,255,255,0.04);
+      border:1px solid rgba(255,255,255,0.08);
+    }
+
+    .quote-box strong{
+      display:block;
+      margin-bottom:6px;
+    }
+
+    .bottom-grid{
+      display:grid;
+      grid-template-columns:1.1fr 0.9fr;
+      gap:20px;
+      margin-top:20px;
+    }
+
+    .panel{
+      background:rgba(255,255,255,0.04);
+      border:1px solid var(--line);
+      border-radius:24px;
+      padding:24px;
+    }
+
+    .panel h4{
+      margin-bottom:14px;
+      font-size:1.2rem;
+    }
+
+    .panel p,
+    .panel li{
+      color:var(--muted);
+    }
+
+    .panel ul{
+      list-style:none;
+      display:grid;
+      gap:12px;
+      margin-top:10px;
+    }
+
+    .panel li{
+      display:flex;
+      gap:10px;
+      align-items:flex-start;
+    }
+
+    .panel li i{
+      color:var(--accent3);
+      margin-top:5px;
+    }
+
+    footer{
+      padding:26px 34px;
+      border-top:1px solid var(--line);
+      color:rgba(255,255,255,0.68);
+      display:flex;
+      justify-content:space-between;
+      flex-wrap:wrap;
+      gap:14px;
+      font-size:0.95rem;
+    }
+
+    @media(max-width:1100px){
+      .hero-grid,
+      .bottom-grid{
+        grid-template-columns:1fr;
+      }
+
+      .timeline{
+        grid-template-columns:repeat(3,1fr);
+      }
+
+      .grid{
+        grid-template-columns:1fr;
+      }
+    }
+
+    @media(max-width:700px){
+      .timeline{
+        grid-template-columns:repeat(2,1fr);
+      }
+
+      .hero,
+      .section,
+      footer{
+        padding-left:20px;
+        padding-right:20px;
+      }
+
+      .hero-copy{
+        padding:24px;
+      }
     }
   </style>
 </head>
+
 <body>
 
-<nav>
-  <strong>TRC #76 Awareness</strong>
-  <div>
-    <a href="#cta">Call to Action</a>
-    <a href="#mmiwg">MMIWG</a>
-    <a href="#creator">Creator</a>
-    <a href="#action">Take Action</a>
-    <a href="#sources">Sources</a>
-  </div>
-</nav>
+<div class="container">
 
-<header>
-  <h1>Honouring the Missing Children</h1>
-  <p>Truth and Reconciliation Commission Call to Action #76 & the Ongoing Crisis of Missing and Murdered Indigenous Women and Girls</p>
-</header>
+  <header class="hero">
 
-<section id="cta">
-  <h2>TRC Call to Action #76 — What & Why</h2>
-  <div class="grid">
-    <div class="card">
-      <img src="image6.jpg" alt="Residential school memorial">
-      <p><strong>What it asks:</strong> Call to Action #76 asks governments, religious institutions, and communities to partner with Indigenous peoples to locate, document, and memorialize burial sites of children who died while attending Canadian residential schools.</p>
-      <p><strong>Why it matters:</strong> For decades, families were denied information about the fate of their children. Properly identifying burial sites creates space for mourning, truth-telling, and community-led commemoration. It is a cornerstone step toward accountability and healing.</p>
+    <div class="topbar">
+
+      <div class="brand">
+        <div class="brand-icon">
+          <i class="fa-solid fa-microscope"></i>
+        </div>
+
+        <div>
+          <h1>Biomedical Engineering Vision</h1>
+          <p>A future built around healthcare innovation, research, and protecting life.</p>
+        </div>
+      </div>
+
+      <div class="pill-group">
+        <div class="pill"><i class="fa-solid fa-graduation-cap"></i> University Applications</div>
+        <div class="pill"><i class="fa-solid fa-dna"></i> Biomedical Engineering</div>
+        <div class="pill"><i class="fa-solid fa-heart"></i> Human & Animal Care</div>
+      </div>
+
     </div>
 
-    <div class="card">
-      <h3>Historical Context</h3>
-      <p>From the late 1800s through the late 20th century, thousands of Indigenous children were removed from their homes and placed in residential schools. Designed to assimilate Indigenous children into Euro‑Canadian culture, these institutions frequently subjected children to neglect, abuse, malnutrition, and disease.</p>
-      <p>Many children died and were buried without proper records. The absence of acknowledgment contributed to intergenerational trauma and a long-standing lack of closure for families and communities.</p>
-    </div>
-  </div>
-</section>
+    <div class="hero-grid">
 
-<section id="mmiwg">
-  <h2>Missing & Murdered Indigenous Women and Girls (MMIWG2S+)</h2>
-  <div class="grid">
-    <div class="card">
-      <img src="image3.jpg" alt="Indigenous women community">
-      <p><strong>Definition:</strong> MMIWG2S+ refers to the epidemic of violence, disappearances, and murders disproportionately affecting Indigenous women, girls, and Two-Spirit people. This includes loved ones who have been murdered, remain missing, or whose disappeared status has not been adequately investigated.</p>
-      <p><strong>Root Causes:</strong> The violence is not isolated — it is tied to colonial dispossession, systemic racism within institutions (health, justice, policing), economic marginalization, inadequate social services, and gendered violence perpetuated over generations.</p>
-    </div>
+      <div class="hero-copy">
 
-    <div class="card">
-      <h3>Statistics & Scope</h3>
-      <ul>
-        <li>Indigenous women face violent victimization at rates significantly higher than non-Indigenous women.</li>
-        <li>Cases are underreported and underinvestigated; many families struggle to get information or action from authorities.</li>
-        <li>The National Inquiry into MMIWG (2016–2019) produced a comprehensive report and Calls for Justice addressing systemic failures.</li>
-      </ul>
-      <p>These numbers reflect structural problems rather than random variation — meaning policy and systemic change are needed to protect lives and ensure justice.</p>
-    </div>
+        <div class="eyebrow">
+          <i class="fa-solid fa-compass"></i>
+          Long-Term Vision
+        </div>
 
-    <div class="card">
-      <h3>Personal & Community Impact</h3>
-      <p>Each case represents a family, a network of relationships, and cultural loss. Communities experience collective grief, fear, and anger; survivors and relatives often report frustration with how investigations are handled and the lack of culturally appropriate supports.</p>
-      <p>Memorials, art projects, and community-led databases exist to reclaim stories, remember victims, and demand systemic reform.</p>
-    </div>
+        <h2>Designing technology that can improve and protect lives.</h2>
 
-    <div class="card">
-      <h3>National Inquiry & Calls for Justice</h3>
-      <p>The National Inquiry into MMIWG concluded with a Final Report that characterized the violence as rooted in colonialism and systemic discrimination, and it issued hundreds of Calls for Justice aimed at governments, institutions, and all Canadians to take specific actions to prevent violence and ensure healing.</p>
-      <p>Examples of Calls for Justice include improving police responses, increasing Indigenous-led services, and ensuring culturally safe investigations and supports for families.</p>
-    </div>
-  </div>
-</section>
+        <p>
+          My goal is to combine engineering, mathematics, and healthcare to create meaningful medical technology.
+          Through university, research, industry experience, and innovation, I want to contribute to the future
+          of medicine while also using my success to help rescue and care for animals in need.
+        </p>
 
-<section>
-  <h2>Where & When — Geographic and Temporal Context</h2>
-  <div class="grid">
-    <div class="card">
-      <img src="image5.jpg" alt="Indigenous territories map">
-      <p>While the crisis is most widely documented in Canada, similar patterns of violence occur in other settler-colonial states such as the United States and Australia. Colonial policies disrupted Indigenous governance and social structures across these regions, contributing to shared vulnerabilities.</p>
+        <div class="button-row">
+          <a href="#journey" class="btn primary">
+            <i class="fa-solid fa-arrow-down"></i>
+            Explore Journey
+          </a>
+
+          <a href="#future" class="btn">
+            <i class="fa-solid fa-lightbulb"></i>
+            Future Goals
+          </a>
+        </div>
+
+      </div>
+
+      <div class="hero-image">
+
+        <img src="images/hero-biomedical-future.jpg" alt="Biomedical engineering future">
+
+        <div class="hero-overlay">
+          <strong>Purpose</strong>
+          <span>
+            Combining empathy, science, and innovation to improve healthcare and protect life.
+          </span>
+        </div>
+
+      </div>
+
     </div>
 
-    <div class="card">
-      <img src="image4.jpg" alt="MMIWG vigil">
-      <p>Although Indigenous communities have resisted and documented these harms for decades, wide public attention increased in the 2010s through grassroots activism, media coverage, artistic works, and digital advocacy. The National Inquiry (2016–2019) represented a major national reckoning, but many advocates emphasize that implementation of recommendations remains uneven.</p>
-    </div>
-  </div>
-</section>
+    <div class="timeline">
 
-<section id="symbols">
-  <h2>Symbols, Memorials, and Cultural Responses</h2>
-  <div class="grid">
-    <div class="card">
-      <img src="image2.jpg" alt="Red dress installation">
-      <p><strong>Red Dress Project:</strong> Artist Jaime Black’s REDress Project uses empty red dresses to symbolize the lives of missing and murdered Indigenous women and girls. The stark red display communicates absence, loss, and a visual demand for attention.</p>
-      <p>Other forms of remembrance include vigils, memorials, oral history projects, and dedicated days of recognition (such as May 5 — Red Dress Day).</p>
-    </div>
+      <div class="timeline-card">
+        <small>Step 1</small>
+        <h4>University Applications</h4>
+      </div>
 
-    <div class="card">
-      <h3>Art as Advocacy</h3>
-      <p>Artists, filmmakers, and writers have used creative expression to center Indigenous experiences, educate broader audiences, and pressure institutions to act. Creative forms of remembrance make invisible stories visible and foster empathy across communities.</p>
-    </div>
-  </div>
-</section>
+      <div class="timeline-card">
+        <small>Step 2</small>
+        <h4>Biomedical Engineering + Math</h4>
+      </div>
 
-<section id="creator">
-  <h2>Media Creator Spotlight: Michelle Chubb</h2>
-  <div class="grid">
-    <div class="card">
-      <img src="image7.jpg" alt="Indigenous activism">
-      <p>Michelle Chubb (@indigenous_baddie on TikTok) combines humor, cultural pride, and storytelling to educate a young audience about Indigenous histories and contemporary issues including MMIWG.</p>
-      <p>Her strategy—short-form video with relatable delivery—makes complex topics accessible and invites viewers to learn more, share resources, and reflect on systemic injustice.</p>
-    </div>
+      <div class="timeline-card">
+        <small>Step 3</small>
+        <h4>Graduate Research</h4>
+      </div>
 
-    <div class="card">
-      <h3>How Creators Help</h3>
-      <ul>
-        <li>Documenting stories and amplifying Indigenous voices</li>
-        <li>Bridging formal research and everyday understanding</li>
-        <li>Pushing institutions into public accountability through awareness</li>
-      </ul>
-    </div>
-  </div>
-</section>
+      <div class="timeline-card">
+        <small>Step 4</small>
+        <h4>Industry Experience</h4>
+      </div>
 
-<section id="action">
-  <h2>Your Role in Reconciliation — Concrete Steps</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>Learn & Reflect</h3>
-      <p>Read primary sources, survivor testimonies, and research reports. Understand the historical policies that created residential schools and ongoing institutional gaps that contribute to MMIWG.</p>
-      <ul>
-        <li>Attend local events and vigils with respect</li>
-        <li>Prioritize Indigenous-led organizations when researching</li>
-      </ul>
+      <div class="timeline-card">
+        <small>Step 5</small>
+        <h4>Innovation & Business</h4>
+      </div>
+
+      <div class="timeline-card">
+        <small>Step 6</small>
+        <h4>Animal Rescue</h4>
+      </div>
+
     </div>
 
-    <div class="card">
-      <h3>Share & Advocate</h3>
-      <p>Use your platforms to share accurate information, support Indigenous creators, and encourage peers to learn. Advocacy can include contacting local representatives to demand better resources and culturally safe policing practices.</p>
+  </header>
+
+  <section class="section" id="journey">
+
+    <div class="section-title">
+      <h3>My Journey</h3>
+      <p>
+        My experiences in healthcare environments helped shape the future I want to pursue.
+        They showed me how science, compassion, and technology all connect together.
+      </p>
     </div>
 
-    <div class="card">
-      <h3>Support Community-Led Action</h3>
-      <p>Donate to community initiatives, support Indigenous-run services, and volunteer time where appropriate. Beware of exploitative charity and ensure support is Indigenous-led.</p>
-    </div>
-  </div>
+    <div class="grid">
 
-  <div class="card" style="margin-top:2.5rem;">
-    <h3>Educational Video</h3>
-    <p>This is a video from CBC that includes:</p>
-    <ul>
-      <li>A clear explanation of TRC Call to Action #76</li>
-      <li>Connections between residential schools and MMIWG</li>
-      <li>Ways viewers can learn more and act</li>
-    </ul>
-    <div class="video-box">
-      <iframe width="100%" height="400" src="https://www.youtube.com/embed/7QMG6-5ZobY" title="Missing and Murdered Indigenous Women and Girls" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-    </div>
-  </div>
-</section>
+      <article class="card">
 
-<section id="sources">
-  <h2>Resources & Further Reading</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>Key Reports & Inquiries</h3>
-      <ul>
-        <li>National Inquiry into Missing and Murdered Indigenous Women and Girls — Final Report</li>
-        <li>Truth and Reconciliation Commission — Calls to Action</li>
-        <li>Statistics Canada reports on Indigenous victimization</li>
-      </ul>
-    </div>
-    <div class="card">
-      <h3>Community & Creative Responses</h3>
-      <ul>
-        <li>REDress Project (Jaime Black)</li>
-        <li>Memorial projects and community databases</li>
-        <li>Indigenous content creators like Michelle Chubb</li>
-      </ul>
-    </div>
-  </div>
-  <p style="margin-top:1.5rem;">Available in Full MLA Format on My Assignment Document.</p>
-</section>
+        <div class="card-image">
+          <img src="images/goal-university-applications.jpg" alt="University applications">
+          <div class="label">University Applications</div>
+        </div>
 
-<footer>
-  <p>NBE3U Culminating Assignment | Truth & Reconciliation Awareness Campaign</p>
-  <p>Designed with respect — remember, always center Indigenous leadership when sharing this work.</p>
-</footer>
+        <div class="card-body">
+
+          <div class="card-title">
+            <div class="icon">
+              <i class="fa-solid fa-school"></i>
+            </div>
+
+            <div>
+              <h4>Academic Motivation</h4>
+            </div>
+          </div>
+
+          <p>
+            Working at the dental clinic completely changed how I viewed school and academics.
+            Seeing how professional and skilled the dentists and assistants were made me realize
+            how important a strong academic background is if I want to contribute to healthcare in the future.
+          </p>
+
+          <div class="quote-box">
+            <strong>Main Realization</strong>
+            I now understand exactly what kind of professional environment I want to work in.
+          </div>
+
+        </div>
+
+      </article>
+
+      <article class="card">
+
+        <div class="card-image">
+          <img src="images/goal-biomedical-engineering-math.jpg" alt="Biomedical engineering and mathematics">
+          <div class="label">Biomedical Engineering</div>
+        </div>
+
+        <div class="card-body">
+
+          <div class="card-title">
+            <div class="icon">
+              <i class="fa-solid fa-atom"></i>
+            </div>
+
+            <div>
+              <h4>Choosing My Major</h4>
+            </div>
+          </div>
+
+          <p>
+            During my placement, I became fascinated by the medical tools and technology used every day.
+            Seeing how important imaging and medical equipment are for patient care made me realize
+            that behind every treatment is an engineer who designed those systems.
+          </p>
+
+          <div class="quote-box">
+            <strong>What Inspired Me</strong>
+            I do not just want to use healthcare technology — I want to create it.
+          </div>
+
+        </div>
+
+      </article>
+
+      <article class="card">
+
+        <div class="card-image">
+          <img src="images/goal-masters-degree.jpg" alt="Graduate school research">
+          <div class="label">Graduate Research</div>
+        </div>
+
+        <div class="card-body">
+
+          <div class="card-title">
+            <div class="icon">
+              <i class="fa-solid fa-flask"></i>
+            </div>
+
+            <div>
+              <h4>Master’s Degree</h4>
+            </div>
+          </div>
+
+          <p>
+            One thing I noticed is that medical technology evolves incredibly fast,
+            and existing tools are not always perfect for every patient.
+            This made me realize that graduate school is necessary if I want to solve
+            real healthcare problems through research and innovation.
+          </p>
+
+          <div class="quote-box">
+            <strong>Future Focus</strong>
+            I want to research new technologies and better engineering solutions for medicine.
+          </div>
+
+        </div>
+
+      </article>
+
+      <article class="card">
+
+        <div class="card-image">
+          <img src="images/goal-career-experience.jpg" alt="Career experience">
+          <div class="label">Career Experience</div>
+        </div>
+
+        <div class="card-body">
+
+          <div class="card-title">
+            <div class="icon">
+              <i class="fa-solid fa-briefcase"></i>
+            </div>
+
+            <div>
+              <h4>Professional Growth</h4>
+            </div>
+          </div>
+
+          <p>
+            My co-op placement taught me that healthcare is about more than science.
+            Communication, teamwork, and empathy are just as important.
+            Learning how to work with patients and staff under pressure showed me the importance
+            of strong interpersonal skills in professional environments.
+          </p>
+
+          <div class="quote-box">
+            <strong>Workplace Lesson</strong>
+            Real-world communication skills are essential for bringing medical ideas into reality.
+          </div>
+
+        </div>
+
+      </article>
+
+      <article class="card">
+
+        <div class="card-image">
+          <img src="images/goal-inventions-business.jpg" alt="Innovation and invention">
+          <div class="label">Innovation & Business</div>
+        </div>
+
+        <div class="card-body">
+
+          <div class="card-title">
+            <div class="icon">
+              <i class="fa-solid fa-lightbulb"></i>
+            </div>
+
+            <div>
+              <h4>Long-Term Ambition</h4>
+            </div>
+          </div>
+
+          <p>
+            One of the most interesting parts of my placement was seeing dental X-ray systems in action.
+            That experience sparked my curiosity about radiation technology and how similar principles
+            are used in radiation oncology to fight cancer. I want to contribute to future cancer treatment
+            technologies and eventually turn those innovations into real products.
+          </p>
+
+          <div class="quote-box">
+            <strong>Future Goal</strong>
+            Design meaningful healthcare technology that can improve treatment and save lives.
+          </div>
+
+        </div>
+
+      </article>
+
+      <article class="card">
+
+        <div class="card-image">
+          <img src="images/goal-animal-rescue.jpg" alt="Animal rescue">
+          <div class="label">Animal Rescue</div>
+        </div>
+
+        <div class="card-body">
+
+          <div class="card-title">
+            <div class="icon">
+              <i class="fa-solid fa-paw"></i>
+            </div>
+
+            <div>
+              <h4>Protecting Life</h4>
+            </div>
+          </div>
+
+          <p>
+            Talking to patients every day taught me the importance of empathy and caring for vulnerable people.
+            Over time, I realized that this feeling extends beyond humans as well.
+            The same compassion that motivates me to help improve healthcare also inspires me
+            to support animal rescue and care for animals in need.
+          </p>
+
+          <div class="quote-box">
+            <strong>Core Value</strong>
+            Whether helping patients or rescuing animals, my future is centered around protecting life.
+          </div>
+
+        </div>
+
+      </article>
+
+    </div>
+
+  </section>
+
+  <section class="section" id="future">
+
+    <div class="section-title">
+      <h3>What Connects Everything</h3>
+      <p>
+        My experiences helped me realize that science and empathy should work together.
+        Technology becomes meaningful when it genuinely improves lives.
+      </p>
+    </div>
+
+    <div class="bottom-grid">
+
+      <div class="panel">
+
+        <h4>Personal Vision</h4>
+
+        <p>
+          I want to become a biomedical engineer because I care deeply about improving and protecting life.
+          I am especially interested in radiation oncology research because I want to help discover better ways
+          to target and treat cancer. My long-term goal is to combine engineering, research, and innovation
+          to create useful healthcare technology while also supporting animal rescue efforts and helping vulnerable lives.
+        </p>
+
+      </div>
+
+      <div class="panel">
+
+        <h4>Skills & Values</h4>
+
+        <ul>
+
+          <li>
+            <i class="fa-solid fa-check"></i>
+            Strong academic preparation for competitive university programs
+          </li>
+
+          <li>
+            <i class="fa-solid fa-check"></i>
+            Engineering and mathematical problem-solving
+          </li>
+
+          <li>
+            <i class="fa-solid fa-check"></i>
+            Research curiosity and analytical thinking
+          </li>
+
+          <li>
+            <i class="fa-solid fa-check"></i>
+            Communication and teamwork in healthcare settings
+          </li>
+
+          <li>
+            <i class="fa-solid fa-check"></i>
+            Innovation and entrepreneurial mindset
+          </li>
+
+          <li>
+            <i class="fa-solid fa-check"></i>
+            Compassion for both people and animals
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <footer>
+    <div>Student: Yvette Shao</div>
+    <div>Teacher: Mr. Chu</div>
+  </footer>
+
+</div>
 
 </body>
 </html>
